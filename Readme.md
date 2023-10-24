@@ -1,6 +1,6 @@
 # Text Generation WebUI TypeScript client
 
-This is a TypeScript client for consuming API provided by [text-generation-webui](https://github.com/oobabooga/text-generation-webui).
+This is a small TypeScript client for consuming API provided by [text-generation-webui](https://github.com/oobabooga/text-generation-webui).
 
 - **Things present**:
   - Loading model
@@ -27,3 +27,5 @@ npx ts-node Example.ts
 ```bash
 npm run example
 ```
+
+More usage examples in `__tests__\text-generation-webui-api.test.ts`

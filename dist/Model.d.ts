@@ -1,0 +1,31 @@
+import { ModelInfo } from "./Types/ModelInfo";
+import { ModelLoader } from "./Constants/ModelLoader";
+import { ModelApiAction } from "./Constants/ModelApiAction";
+export type ModelApiRequest = {
+    action: ModelApiAction;
+    model_name?: string;
+    args?: Partial<ModelApiRequestArgs>;
+};
+type ModelApiRequestArgs = {
+    loader: ModelLoader;
+    bf16: boolean;
+    load_in_8bit: boolean;
+    groupsize: number;
+    wbits: number;
+    threads: number;
+    n_batch: number;
+    no_mmap: boolean;
+    mlock: boolean;
+    cache_capacity: null | number;
+    n_gpu_layers: number;
+    n_ctx: number;
+    rwkv_strategy: null | string;
+    rwkv_cuda_on: boolean;
+};
+export declare function modelApi(request: ModelApiRequest): Promise<any>;
+export declare function getModelInfo(modelName: string): Promise<ModelInfo>;
+export declare function loadModel(modelName: string, loader: ModelLoader): Promise<any>;
+export declare function unloadModel(): Promise<any>;
+export declare function getModels(): Promise<string[]>;
+export declare function getLoadedModel(): Promise<string>;
+export {};

@@ -2,11 +2,18 @@
   "name": "text-generation-webui-typescript-client",
   "version": "1.0.0",
   "description": "TypeScript client for text-generation-webui",
-  "main": "Example.ts",
+
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "example": "npx ts-node Example.ts"
+    "example": "npx ts-node Example.ts",
+    "compile": "npx tsc --project tsconfig.json"
   },
+
+  "exports":{
+    ".": "./dist/Index.js",
+    "./dist/Index.js": "./dist/Index.js"
+  },
+
   "author": "",
   "license": "ISC",
   "dependencies": {

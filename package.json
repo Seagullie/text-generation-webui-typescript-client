@@ -9,6 +9,8 @@
     "compile": "npx tsc --project tsconfig.json"
   },
 
+  "main": "dist/Index.js",
+
   "exports":{
     ".": "./dist/Index.js",
     "./dist/Index.js": "./dist/Index.js"

@@ -29,3 +29,6 @@ npm run example
 ```
 
 More usage examples in `__tests__\text-generation-webui-api.test.ts`
+
+## Node Module
+Add the client to your project by running `npm install Seagullie/text-generation-webui-typescript-client`
